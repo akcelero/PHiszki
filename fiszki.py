@@ -1,8 +1,14 @@
-#!/bin/python
 from random import randint
 import random
 import sys
 import os
+
+if len(sys.argv) < 2:
+	print ""
+	print "uruchamianie przez \"python ./fiszki.py [PLIK]\""
+	print "w pliku slowka zapisane w formie wersja_angielska:wersja_polska"
+	print ""
+	quit()
 
 f = open(sys.argv[1], 'r')
 
@@ -45,7 +51,7 @@ while len(tab) > 0:
 		if tab[nr][3] == 0 or tab[nr][2] == 3:
 			tab.remove(tab[nr])
 	else:
-		
+
 		tab[nr][3] = 1
 		if len(answer) > 0:
 			print answer
